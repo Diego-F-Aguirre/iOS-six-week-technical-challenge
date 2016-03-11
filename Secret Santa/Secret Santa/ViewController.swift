@@ -14,10 +14,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var yourNameLabel: UILabel!
     @IBOutlet weak var yourPartnerLabel: UILabel!
     
+    var programmer: Programmers?
     
-    var programmerArray = ["Retika","Jake Hardey","Cameron","Michael Mecham","Youcef","Daniel","Pierre","Dillon Slade","Kaytee","Alex","Parker","Aaron","Gibson","Brock","James","Nathan","Josh","Taylor","Caleb","Emily","Krissy"]
     
-
+//    let programmers = Programmers()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +29,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         yourNameLabel.text = yourNameTextfield.text
         
-        
-        yourPartnerLabel.text = programmerArray.shuffle().first
-
-
+//        yourPartnerLabel.text = Programmers.init().programmersArray.shuffle().first
     }
     
+    @IBAction func addButtonPressed(sender: AnyObject) {
+        
+        let newProgrammer = Programmers(name: yourNameTextfield.text!)
+        
+        ProgrammersController.sharedController.addProgrammer(newProgrammer)
+        
+        
+    }
+    
+ 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         yourNameTextfield.resignFirstResponder()
         return true
     }
+    
+    
+    
+    // MARK: - Navigation
+    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toList" {
+            
+            let indexPath = UITableView.indexPathForCell
+            
+            let programmer = ProgrammersController.sharedController.programmers[indexPath]
+            
+            ProgrammersController.sharedController.updateWithProgrammer(programmer)
+            
+            
+//            if let programmerTableView = segue.destinationViewController as? ProgrammersTableViewController {
+//                programmerTableView.updateWithProgrammer(<#T##programmer: Programmers##Programmers#>)
+//            }
+        }
+    }
+    
 
 
 }

@@ -12,6 +12,9 @@
 		BC93CCFB1C9327FB00315E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC93CCF91C9327FB00315E36 /* Main.storyboard */; };
 		BC93CCFD1C9327FB00315E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC93CCFC1C9327FB00315E36 /* Assets.xcassets */; };
 		BC93CD001C9327FB00315E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC93CCFE1C9327FB00315E36 /* LaunchScreen.storyboard */; };
+		BC93CD0A1C933CF400315E36 /* Programmers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93CD091C933CF400315E36 /* Programmers.swift */; };
+		BC93CD0C1C93432E00315E36 /* ProgrammersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93CD0B1C93432E00315E36 /* ProgrammersTableViewController.swift */; };
+		BC93CD0F1C93473100315E36 /* ProgrammersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93CD0E1C93473100315E36 /* ProgrammersController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		BC93CCFC1C9327FB00315E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC93CCFF1C9327FB00315E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC93CD011C9327FB00315E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC93CD091C933CF400315E36 /* Programmers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Programmers.swift; sourceTree = "<group>"; };
+		BC93CD0B1C93432E00315E36 /* ProgrammersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammersTableViewController.swift; sourceTree = "<group>"; };
+		BC93CD0E1C93473100315E36 /* ProgrammersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammersController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		BC93CCF41C9327FB00315E36 /* Secret Santa */ = {
 			isa = PBXGroup;
 			children = (
-				BC93CCF51C9327FB00315E36 /* AppDelegate.swift */,
-				BC93CCF71C9327FB00315E36 /* ViewController.swift */,
+				BC93CD0D1C93470600315E36 /* Model */,
+				BC93CD111C93474500315E36 /* View */,
+				BC93CD101C93473900315E36 /* Controllers */,
 				BC93CCF91C9327FB00315E36 /* Main.storyboard */,
 				BC93CCFC1C9327FB00315E36 /* Assets.xcassets */,
+				BC93CCF51C9327FB00315E36 /* AppDelegate.swift */,
 				BC93CCFE1C9327FB00315E36 /* LaunchScreen.storyboard */,
 				BC93CD011C9327FB00315E36 /* Info.plist */,
 			);
 			path = "Secret Santa";
+			sourceTree = "<group>";
+		};
+		BC93CD0D1C93470600315E36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC93CD091C933CF400315E36 /* Programmers.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BC93CD101C93473900315E36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC93CD0E1C93473100315E36 /* ProgrammersController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BC93CD111C93474500315E36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC93CD0B1C93432E00315E36 /* ProgrammersTableViewController.swift */,
+				BC93CCF71C9327FB00315E36 /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC93CD0F1C93473100315E36 /* ProgrammersController.swift in Sources */,
 				BC93CCF81C9327FB00315E36 /* ViewController.swift in Sources */,
+				BC93CD0C1C93432E00315E36 /* ProgrammersTableViewController.swift in Sources */,
+				BC93CD0A1C933CF400315E36 /* Programmers.swift in Sources */,
 				BC93CCF61C9327FB00315E36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
