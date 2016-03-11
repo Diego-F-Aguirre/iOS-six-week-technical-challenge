@@ -284,6 +284,7 @@
 				BC93CD061C9327FB00315E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
