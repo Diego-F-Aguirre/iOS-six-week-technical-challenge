@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var programmer: Programmers?
     
     
-//    let programmers = Programmers()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,9 +25,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
     @IBAction func pairButtonPressed(sender: AnyObject) {
         
-        yourNameLabel.text = yourNameTextfield.text
+        yourNameLabel.text = ProgrammersController.sharedController.programmers.shuffle().first?.name
         
-//        yourPartnerLabel.text = Programmers.init().programmersArray.shuffle().first
+        yourPartnerLabel.text = ProgrammersController.sharedController.programmers.shuffle().first?.name
+
     }
     
     @IBAction func addButtonPressed(sender: AnyObject) {
@@ -47,28 +46,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    
-    // MARK: - Navigation
-    
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toList" {
-            
-            let indexPath = UITableView.indexPathForCell
-            
-            let programmer = ProgrammersController.sharedController.programmers[indexPath]
-            
-            ProgrammersController.sharedController.updateWithProgrammer(programmer)
-            
-            
-//            if let programmerTableView = segue.destinationViewController as? ProgrammersTableViewController {
-//                programmerTableView.updateWithProgrammer(<#T##programmer: Programmers##Programmers#>)
-//            }
-        }
-    }
-    
-
 
 }
 

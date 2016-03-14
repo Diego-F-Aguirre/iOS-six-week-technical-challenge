@@ -11,9 +11,9 @@ import Foundation
 
 class Programmers: Equatable {
     
-    var name: String
+    var name: String?
     
-    init(name: String) {
+    init(name: String?) {
         self.name = name
     }
     
